@@ -1,3 +1,3 @@
 import sys
 
-print("Running", sys.modules[__name__])
+print("Running", __name__)
