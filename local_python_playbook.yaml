@@ -1,0 +1,12 @@
+---
+- name: runs 
+  hosts: localhost
+
+  tasks:
+    - cammand: "python script1.py"
+      args: chdir /python/
+    - cammand: "python script2.py"
+      args: chdir /python/
+    - cammand: "python script3.py"
+      args: chdir /python/
+   
