@@ -17,7 +17,6 @@ Handlers can be triggered by a Task and are ryb once at the end of a Play.
   remote_user: justin
   become_method: sudo
   become_user: root
-	
   vars:
       http_port: 80
       max_clients: 200
@@ -31,7 +30,7 @@ Handlers can be triggered by a Task and are ryb once at the end of a Play.
     - restart apache
   - name: start httpd
     service: name=httpd state=running
-			
+   
   handlers:
   - name: restart apache
     service: name=httpd state=restarted
