@@ -10,4 +10,24 @@
       
   - name: Debug of script1
     debug: msg="output is {{ output.stdout }}"
+
+  - name: Execute Script
+    command: python script2.py
+    register:
+      output
+    args:
+      chdir: /home/com0004/ansible-practice/python/
+      
+  - name: Debug of script2
+    debug: msg="output is {{ output.stdout }}"
+  
+  - name: Execute Script
+    command: python script3.py
+    register:
+      output
+    args:
+      chdir: /home/com0004/ansible-practice/python/
+      
+  - name: Debug of script3
+    debug: msg="output is {{ output.stdout }}"
   
