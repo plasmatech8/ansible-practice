@@ -9,6 +9,12 @@ Tasks are run sequencially.
 
 Handlers can be triggered by a Task and are ryb once at the end of a Play.
 
+## Using playbooks to run python scripts in the control machine
+
+Run `ansible-playbook local_python_playbook.yaml`.
+
+This will run the scripts script1.py, script2.py and script3.py sequentially and provide stdoutput.
+
 ## Example
 ```yaml
 ---
