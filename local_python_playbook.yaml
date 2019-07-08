@@ -3,7 +3,32 @@
   hosts: localhost
 
   tasks:
-    - cammand: "python python/script1.py"
-    - cammand: "python python/script2.py"
-    - cammand: "python python/script3.py"
+    - name: script1
+      cammand: "python script1.py"
+      register:
+        output
+      args:
+        chdir: python/
    
+    - name: Debug of script1
+      debug: msg="output is {{ output.stout }}"
+       
+    - name: script2
+      cammand: "python script2.py"
+      register:
+        output
+      args:
+        chdir: python/
+        
+    - name: Debug of script1
+      debug: msg="output is {{ output.stout }}"
+      
+    - name: script3
+      cammand: "python script3.py"
+      register:
+        output
+      args:
+        chdir: python/
+      
+    - name: Debug of script1
+      debug: msg="output is {{ output.stout }}"
