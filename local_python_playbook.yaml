@@ -3,10 +3,7 @@
   hosts: localhost
 
   tasks:
-    - cammand: "python script1.py"
-      args: chdir /python/
-    - cammand: "python script2.py"
-      args: chdir /python/
-    - cammand: "python script3.py"
-      args: chdir /python/
+    - cammand: "python python/script1.py"
+    - cammand: "python python/script2.py"
+    - cammand: "python python/script3.py"
    
